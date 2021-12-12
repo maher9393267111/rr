@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/maher9393267111/react-app-one.git/static/css/main.84b0154a.chunk.css",
+    "main.js": "/maher9393267111/react-app-one.git/static/js/main.08bf5e18.chunk.js",
+    "main.js.map": "/maher9393267111/react-app-one.git/static/js/main.08bf5e18.chunk.js.map",
+    "runtime-main.js": "/maher9393267111/react-app-one.git/static/js/runtime-main.ce404365.js",
+    "runtime-main.js.map": "/maher9393267111/react-app-one.git/static/js/runtime-main.ce404365.js.map",
+    "static/css/2.2f48ea86.chunk.css": "/maher9393267111/react-app-one.git/static/css/2.2f48ea86.chunk.css",
+    "static/js/2.1b5183d3.chunk.js": "/maher9393267111/react-app-one.git/static/js/2.1b5183d3.chunk.js",
+    "static/js/2.1b5183d3.chunk.js.map": "/maher9393267111/react-app-one.git/static/js/2.1b5183d3.chunk.js.map",
+    "static/js/3.0d7a164c.chunk.js": "/maher9393267111/react-app-one.git/static/js/3.0d7a164c.chunk.js",
+    "static/js/3.0d7a164c.chunk.js.map": "/maher9393267111/react-app-one.git/static/js/3.0d7a164c.chunk.js.map",
+    "index.html": "/maher9393267111/react-app-one.git/index.html",
+    "static/css/2.2f48ea86.chunk.css.map": "/maher9393267111/react-app-one.git/static/css/2.2f48ea86.chunk.css.map",
+    "static/css/main.84b0154a.chunk.css.map": "/maher9393267111/react-app-one.git/static/css/main.84b0154a.chunk.css.map",
+    "static/js/2.1b5183d3.chunk.js.LICENSE.txt": "/maher9393267111/react-app-one.git/static/js/2.1b5183d3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ce404365.js",
+    "static/css/2.2f48ea86.chunk.css",
+    "static/js/2.1b5183d3.chunk.js",
+    "static/css/main.84b0154a.chunk.css",
+    "static/js/main.08bf5e18.chunk.js"
+  ]
+}
