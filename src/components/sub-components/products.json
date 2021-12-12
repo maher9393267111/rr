@@ -1,0 +1,32 @@
+[
+
+{
+"id":1,
+"price":"100$",
+"name":"product1",
+"title":"Balanced advantage mutual funds in favour as pure equity play turns chop",
+"image":"https://picsum.photos/id/231/150/220"
+},
+{
+    "id":2,
+    "price":"100$",
+    "name":"product2",
+    "title":"Balanced advantage mutual funds in favour as pure equity play turns chop",
+    "image":"https://picsum.photos/id/235/150/220"
+    },
+    {
+        "id":3,
+        "price":"100$",
+        "name":"product3",
+        "title":"Balanced advantage mutual funds in favour as pure equity play turns chop",
+        "image":"https://picsum.photos/id/27/150/220"
+        },
+        {
+            "id":4,
+            "price":"100$",
+            "name":"product4",
+            "title":"Balanced advantage mutual funds in favour as pure equity play turns chop",
+            "image":"https://picsum.photos/id/227/150/220"
+            }
+
+]

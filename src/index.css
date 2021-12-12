@@ -1,39 +1,97 @@
+.nav-container{
 
-.cards{
+color: white;
+background-color: black;
 
-border: 2px solid white;
+}
+
+
+.nav-logo{
+width: 180px;
+
+
+
+
+
+
+}
+
+
+.nav-logo h4 {
+  text-align: center;
+  width: 113px;
+  position: absolute;
+
+  left: 85px;
+  padding-top: 56px;
+  font-style: unset;
+  background: darkcyan;
+  border-radius: 10px;
+
+
+
+}
+
+.world-icon{
+width: 13px;
+
+}
+.search-icon{
+  width: 13px;
+
+  }
+
+
+
+
+
+.navba{
+
+
+}
+
+.nav-items{
+
+display:flex;
+list-style:none;
+justify-content: space-between;
+width: 550px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-weight: 700;
+}
+
+.nav-items li{
+list-style: none;
+
+
+}
+
+
+.right-nav{
+
+display: flex;
+justify-content: space-between;
+width: 300px;
+margin-top: 12px;
+}
+
+.book-tab{
+
+
+
+}
+
+
+.book-tab-container{
+position: absolute;
+top:55px;
+width:1066px;
+background-color: blueviolet;
+margin-left: -155px;
 
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

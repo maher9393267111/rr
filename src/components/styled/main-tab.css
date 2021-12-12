@@ -1,0 +1,60 @@
+.main-app{
+
+margin-top: 40px;
+
+border:3px solid slateblue
+}
+
+.col-up{
+    border: 3px solid cornflowerblue;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+
+.col-right{
+    font-weight: 800;
+    color: cornflowerblue;
+    font-size: 18px;
+
+}
+
+.col-left{
+    border: 2px solid black;
+    padding: 5px;
+    padding-top: 6px;
+}
+
+
+.middle-col{
+    margin-top: 22px;
+    margin-bottom: 22px;
+
+
+}
+.flex-middle{
+font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 41px;
+    color: mediumseagreen;
+
+
+}
+
+.middle-right{
+
+
+
+}
+
+.middle-left{
+
+
+
+
+}
