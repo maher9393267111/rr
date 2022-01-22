@@ -29,6 +29,64 @@ export const mobile = (props) => {
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+make slider by stylde component:
+
+component file https://github.com/safak/youtube/blob/react-shop-ui/src/components/Slider.jsx 
+yotube link ==> https://www.youtube.com/watch?v=c1xTDSIXit8&t=811s min 38:18
+
+
+const Wrapper = styled.div`
+  height: 100%;
+  display: flex;
+  transition: all 1.5s ease;
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
+`;
+
+
+.method to slide
+
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction) => {
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    }
+    
+    arrow left click    <Arrow direction="left" onClick={() => handleClick("left")}>
+    
+    arrow right click    <Arrow direction="right" onClick={() => handleClick("lright")}>
+
+slide make map 
+
+ <Wrapper slideIndex={slideIndex}>
+        {sliderItems.map((item) => (
+          <Slide bg={item.bg} key={item.id}>
+            <ImgContainer>
+              <Image src={item.img} />
+            </ImgContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Desc>{item.desc}</Desc>
+              <Button>SHOW NOW</Button>
+            </InfoContainer>
+          </Slide>
+        ))}
+      </Wrapper>
+      
+      
+      
+
+
+
+
+
+
+
+
+
+
+
 
 
 
