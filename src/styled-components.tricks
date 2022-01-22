@@ -1,0 +1,36 @@
+********************responsive query makes:*************
+
+++ meke file name is responsive.js 
+
+import { css } from "styled-components";
+
+export const mobile = (props) => {
+  return css`
+    @media only screen and (max-width: 380px) {
+      ${props}
+    }
+  `;
+};
+
+  +++ import it in component to use it in it
+  
+  **************import { mobile } from "./responsive";********************
+  import styled from "styled-components";
+  
+  const Wrapper = styled.div`
+  width: 40%;
+
+  padding: 20px;
+  color:'green'
+  background-color: red;
+  ${mobile({ color: "red", })}
+  ${mobile({ backgroundColor: "green", })}    <<<<<<<<<<<<<<
+`;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
