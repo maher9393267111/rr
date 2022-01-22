@@ -23,7 +23,7 @@ export const mobile = (props) => {
   padding: 20px;
   color:'green'
   background-color: red;
-  ${mobile({ color: "red", })}
+  ${mobile({ color: "red",fontSize:40px })}
   ${mobile({ backgroundColor: "green", })}    <<<<<<<<<<<<<<
 `;
 
