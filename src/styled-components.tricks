@@ -74,7 +74,42 @@ slide make map
         ))}
       </Wrapper>
       
+      *****************************************************************************************
       
+      hover in item into this item
+      
+      const Container = styled.div`
+  flex: 1;
+  margin: 5px;
+  min-width: 280px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5fbfd;
+  position: relative;
+  
+  &:hover ${Info}{ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+    opacity: 1;
+  }
+`;
+
+product component example link      https://github.com/safak/youtube/blob/react-shop-ui/src/components/Product.jsx
+
+show in yotueb https://www.youtube.com/watch?v=c1xTDSIXit8&t=811s  min(1:14:00)
+
+
+*******************************************************************************************************************
+
+
+
+
+
+
+
+    
+    
       
 
 
