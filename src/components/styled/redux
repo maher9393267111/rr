@@ -24,6 +24,145 @@ const currentUser = (state = {}, action) => {
 export default currentUser;
 
 
+/////// COMBINE reducer function files in one file
+
+
+import currentUser from './currentUser'
+import counter from './counter'
+import {combineReducers} from 'redux'
+
+const rootReducer = combineReducers({
+    currentUser,
+    counter
+})
+
+======> use in component well usin sam names we set here
+/// in component ////////
+ const counter = useSelector(state => state.counter)
+  const currentUser = useSelector(state => state.currentUser)
+
+
+
+export default rootReducer
+
+
+
+/// Store thee rootReducer and use it
+
+
+import {createStore} from 'redux'
+import rootReducer from './reducers'
+import {Provider} from 'react-redux'
+
+const store = createStore(
+    rootReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
+)
+
+wrapp App component with {provider}
+
+<Provider store={store}><App /></Provider> 
+
+
+use in the component with useselector
+
+const counter = useSelector(state => state.counter)
+// 1
+const currentUser = useSelector(state => state.currentUser)
+// {}
+
+  ***************   Allactons file ********************
+  
+  
+  const setUser = (userObj) => {-----------
+   return {
+      type: "SET_USER",
+      payload: userObj
+    }
+}
+
+======> and his function in reducer well be like this:
+
+
+case "SET_USER":----------
+   return {
+   ...state,
+   user: action.payload,
+   loggedIn: true
+}
+
+
+
+in commponnet well be like this 
+
+1 import {useSelector, useDispatch} from 'react-redux'
+
+2  const counter = useSelector(state => state.counter)
+  const currentUser = useSelector(state => state.currentUser)
+  
+  
+  3   const dispatch = useDispatch()
+  
+  4  const user = {name: "Rei"} =======> we well use it in setuser function from action and reducr 
+
+5 current user functions in reducer ========>
+
+const **********currentUser*********** = (state = {}, action) => {
+    switch(action.type){
+        case "SET_USER":
+            return {
+                ...state,
+                user: action.payload,
+                loggedIn: true
+            }
+        case "LOG_OUT":
+            return {
+                ...state,
+                user: {},
+                loggedIn: false
+            }
+        default:
+            return state
+    }
+}
+
+export default currentUser;
+
+
+const user = {name: "Rei"}
+
+  useEffect(() => {
+    dispatch(allActions.userActions.setUser(user))
+  }, []) ========> when use this function the log in well be trueeeeee
+
+return (
+    <div className="App">
+      {
+        currentUser.loggedIn ? 
+        <>
+          <h1>Hello, {currentUser.user.name}</h1>
+          <button onClick={() => dispatch(allActions.userActions.logOut())}>Logout</button>
+        </> 
+        : 
+        <>
+          <h1>Login</h1>
+          <button onClick={() => dispatch(allActions.userActions.setUser(user))}>Login as Rei</button>
+        </>
+        }
+      <h1>Counter: {counter}</h1>
+      <button onClick={() => dispatch(allActions.counterActions.increment())}>Increase Counter</button>
+      <button onClick={() => dispatch(allActions.counterActions.decrement())}>Decrease Counter</button>
+    </div>
+  );
+}
+
+
+
+************************************************************************************************************************************************
+*************************************************************************************************************************************************
+
+
+
 
 
 
