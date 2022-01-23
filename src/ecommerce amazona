@@ -5,12 +5,46 @@ the screen page have 3 major section header and main(router well work) and foote
 
 in app.js the every thin containing class nam is  {className="grid-container"}
  
+ <Route path="/product/:id" component={ProductScreen}></Route>
+          <Route path="/" component={HomeScreen} exact></Route>
+ 
  
  router have to route ===> HOMESCREEN  PATH='/'   AND PRODUCT-SCREEN PATH='/PRODCUT/:ID'
+ 
+ <<<<< HOMESCREEN >>>>>>    WELL SHOW ALL PRODUCTS 
+ 
+ PRODUCT.JS WELL BE CART OF ALL PRODUCTS BY MAKE MAP OF DATA IN HOMESCREEN >>>>
+ 
+ IN PRODUCT.JS LINK TO THIS SPECEFIC ID 
+ 
  
  
  * HOMESCREEN.JS IMPORT DATA.JS  AND PRODCT.JS(CART OF PRODUCT) >>> MAKE MAP TO PRODUTC WITH THIS DATA IN HOMESCREEN.JS
  
- IN {PRODUCT.JS} >>>>. IMPORT DATA.JS AND WHEN CLICK TO SPECEFIC PRODUCT FROM
+ 
 
 
+******************************************************
+<<<<<<<<<<<<<<<<<<< PRODUCT.JS  >>>>>>>>>>>>>>>>>>>
+ LINK https://github.com/basir/amazona/commit/2b357f0faf8406573e2084b3ed1906e9bdcb4b1f
+
+ <div key={product._id} className="card">
+      <a href={`/product/${product._id}`}>  <<<<<<<<<<<<<<<<  LINK TO GO TO TJIS PRODUCTS
+
+
+*****************************************************
+
+  <<<<<<<<< productScreen>>>>>>>> 
+  ****WELL SHOW SPECEFIC PRODUCT BY HIS ID
+import Rating from '../components/Rating';
+import data from '../data';
+
+////ID ///// IN {PRODUCTSCREEN.JS} >>>>. IMPORT DATA.JS AND WHEN CLICK TO SPECEFIC PRODUCT FROM HOMESCREEN WELL GO TO THE PRODUCT WITH HAS THIS ID
+
+ ++++ COMPARE++++++   const product = data.products.find((x) => x._id === props.match.params.id);***************************************IMPORTANT CODE
+  if (!product) {
+    return <div> Product Not Found</div>;
+  }
+  
+     <li>Pirce : ${product.price}</li> =======>  {product} well contain the data of product
+         
