@@ -1,0 +1,40 @@
+                              *********************** ECOMMERCE BASIR AMAZONA PROJECT *************************
+                              
+ 1- DATA.JS CONTAIN  ALL PRODUCTS  LINK  https://github.com/basir/amazona/commit/7d86fd3398d50f84be8acde980cbb039c4c5df22
+ 2- IMPORT FILE IN APP.JS
+ 3- PRODUCT.JS MAPPING WITH DATA >>>>>   IMPORT PRODUCT.JS IN APP.JS AND MAKE TO PRODUCT.JS INSIDE DATA OF PRODUCTS MAP SEND KEY {ID} AND {DATA}
+ 4-IN PRODUCT.JS MAKE CARD TO PRODUCT AND IMPORT RATING.JS IN IT AND IN PRODUCT.JS SEND RATING OF PRODUCT IN PROPS TO RATING.JS AND NUMVIEWS
+ 5- IN RATING.JS MAKE DIFFERENT STARS VIEWS if :
+ 
+  star number one >>>>>> * if product have rating >1 show tam star if rating<1 show half star 
+   star number 2 >>>>>> * if product have rating >2 show tam star if rating<1.5 show half star 
+    star number 4 >>>>>> * if product have rating >1 show tam star if rating<1 show half star 
+     star number 5 >>>>>> * if product have rating >1 show tam star if rating<1 show half star 
+     
+     link https://github.com/basir/amazona/commit/7d86fd3398d50f84be8acde980cbb039c4c5df22
+     like this  <span>
+        <i
+          className={
+            rating >= 1
+              ? 'fa fa-star'
+              : rating >= 0.5
+              ? 'fa fa-star-half-o'
+              : 'fa fa-star-o'
+          }
+        ></i>
+      </span>
+      <span>
+        <i
+          className={
+            rating >= 2
+              ? 'fa fa-star'
+              : rating >= 1.5
+              ? 'fa fa-star-half-o'
+              : 'fa fa-star-o'
+          }
+        ></i>
+
+
+
+
+
