@@ -24,6 +24,23 @@ github link >>>>>> https://github.com/safak/youtube/blob/react-portfolio/src/com
 
 
 
+**********/active class condition/************  active link same thing 
+github link https://github.com/safak/youtube/blob/react-portfolio/src/components/portfolioList/PortfolioList.jsx
+yotube min(1:32)  link  https://www.youtube.com/watch?v=7WwtzsSHdpI&list=WL&index=2&t=2441s
+ <li
+      className={active ? "portfolioList active" : "portfolioList"}
+      onClick={() => setSelected(id)}
+    >
+      {title}
+    </li>
+    
+    
+    
+    
+    
+    
+    
+
 
   
   
