@@ -1,0 +1,45 @@
+const [openDrawer, toggleDrawer] = useState(false);
+  const drawerRef = useRef(null);
+
+  useEffect(() => {
+    const closeDrawer = (event) => {
+      if (drawerRef.current && drawerRef.current.contains(event.target)) {
+        return;
+      }
+
+      toggleDrawer(false);
+    };
+
+   // document.addEventListener("mousedown", closeDrawer);
+    // return () => document.removeEventListener("mousedown", closeDrawer);
+  }, []);
+  
+  
+  
+  ***** click       <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)}>
+  
+  ****** ul with ref    <Navbar.Items ref={drawerRef} openDrawer={openDrawer}>
+  
+  
+  ul (sidebar styles)=====>>>>>>>  Items: styled.ul`
+    display: flex;
+    list-style: none;
+
+    @media only screen and (max-width: 40em) {
+      position: fixed;
+      right: 0;
+      top: 0;
+
+      height: 100%;
+
+      flex-direction: column;
+
+      background-color: #ffffff;
+      padding: 1rem 2rem;
+
+      transition: 0.2s ease-out;
+
+      transform: ${({ openDrawer }) =>
+        openDrawer ? `translateX(0)` : `translateX(100%)`};>>>>>>>>>>>>>>> ////when openDrawer is true translateX  wellbe  and if translateX is false hide and go to right 100%
+    }
+  `,
