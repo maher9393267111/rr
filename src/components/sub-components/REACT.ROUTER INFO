@@ -1,0 +1,16 @@
+
+     ****************USELOCATION******************
+     
+   LINK   https://ultimatecourses.com/blog/query-strings-search-params-react-router
+   
+   
+ URL >>>>>>>>  ?sort=name&order=ascending
+ 
+ 
+ const Users = () => {
+  const [searchParams] = useSearchParams();
+  console.log(searchParams.get('sort')); // 'name' <<<<<<<<<<<<<<<
+
+  return <div>Users</div>;
+};
+   
