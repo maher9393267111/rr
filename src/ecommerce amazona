@@ -1,5 +1,44 @@
                               *********************** ECOMMERCE BASIR AMAZONA PROJECT *************************
  
+ index.css link https://github.com/basir/amazona/blob/master/frontend/src/index.css
+ 
+ app have 3 section >>>> header //// main /// footer
+ 
+ /* Layout */
+.grid-container { >>>>>>>>>>>>> app. container
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  background-color: #203040;
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+footer {
+  grid-area: footer;
+  background-color: #203040;
+  color: #ffffff;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 the screen page have 3 major section header and main(router well work) and footer 
 
@@ -47,4 +86,118 @@ import data from '../data';
   }
   
      <li>Pirce : ${product.price}</li> =======>  {product} well contain the data of product
+         
+         
+     ******************************************************************************************************
+     
+                            ******------------------- BACKEND FOLDER -----------------------*****
+                            
+                            
+                            
+              https://github.com/basir/amazona/commit/c5a30e1d68128b4b01b4ded820c47fd50c06c295            
+                          
+    1- MAKE DATA.JS FILE AND SET PRODUCTS IN IT
+    
+    2- MAKE INIT JSON >>>>> INSTALL EXPRESS 
+    
+    >>>>>>>> import express from 'express';
+import data from './data.js';
+
+const app = express();
+
+app.get('/api/products', (req, res) => {
+  res.send(data.products); <<<<<<<<<<< SEND DATA WITH THIS ROUTE  URL
+});
+         
+         
+         
+         **********************************************************************************
+         
+         <<<<<<<<<<<<<<<<< FETCH DATA FROM BACKEND TO FRONT END  >>>>>>>>>>>>>>>>
+         
+         
+         https://github.com/basir/amazona/commit/c7e329bf12a6e89cb29e4b6ce10fc141ebb98674
+         
+         MAKE COMPONENT TO LOADING SINCE FETCH THE DATA 
+         
+         LoadingBox COMPONENT ....loading
+         
+         
+         ---> fetch data  in homescreen.js
+         
+         import axios from 'axios';
+         
+         import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox'; >>>>>>> show message component if data fetched successfully or not
+
+         
+         >>>>>>>>>>> make empty array to set data from backend in it
+         const [products, setProducts] = useState([]);
+         
+         
+         *********conditions in homescreen******
+         if fetcdata take atime show loadin afte fetched data hidd the loading component and show product.js and make map to data
+         
+         if error of fetched data show meessage.component
+         
+         
+         ************************************************************************************************
+         
+         >>>>>>>>>>>>>>>>>>>>>>>       USE REDUX          <<<<<<<<<<<<<<<<
+         
+         
+         https://github.com/basir/amazona/commit/db8dc3fa07f82efd8d470e7a15387c003fa47e1f.........................
+         
+          npm install redux react-redux
+         
+         FETCH DATA FROM BACKEND BY USE REDUX
+         
+         ACTON FILE TO FETCH DATA AND SET TYPES
+         
+         REDUCER FILE TOS SET CONDITIONS TO ACTION FUNCTION TYPES
+         
+         
+         IN HOMESCREEN.JS 
+         
+      >>>>>>>>> import { useDispatch, useSelector } from 'react-redux';
+import { listProducts } from '../actions/productActions';   <<<<<<<<< ACTION FUNCTION TO FETCH DATA
+
+
+const productList = useSelector((state) => state.productList);
+  const { loading, error, products } = productList; <<<<<<<<<<< THIS FROM REDUCER
+  
+  
+  FETCH DATA IN USE EFFECT dispatch(listProducts());
+
+
+
+      
+         
+         
+         
+         *****************************************************************************************
+         
+         
+                 **********************SPECEFIC PRODUCT ****************
+                 
+                 REDUX WITH PRODUCTSCREEN.JS  FETCH 
+                 
+         FETCH DATA IN PRODUCTSCREEN        https://github.com/basir/amazona/commit/02a96b9bc22c9021285e3e9b077179ea6e43e7fe
+                 
+              
+              
+              
+              ----> EXPRESS ROUTER FOR PRODUCT ID .......> https://github.com/basir/amazona/commit/999e487dd87ed0e9fc2df33483b0e9b6049beb17
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
          
